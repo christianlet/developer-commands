@@ -1,0 +1,102 @@
+[
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && rm -rf node_modules\/ package-lock.json ; npm i ; .\/build.sh'",
+        "library": "write_endpoints",
+        "link_type": "file"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-api-base'",
+        "library": "lib-fox-api-base",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-aws-wrapper'",
+        "library": "lib-fox-aws-wrapper",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-config-base'",
+        "library": "lib-fox-config-base",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-database'",
+        "library": "lib-fox-database",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-exceptions'",
+        "library": "lib-fox-exceptions",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-id-generator'",
+        "library": "lib-fox-id-generator",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-message-writer'",
+        "library": "lib-fox-message-writer",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-read-api'",
+        "library": "lib-fox-read-api",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/write_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-write-api'",
+        "library": "lib-fox-write-api",
+        "link_type": "write_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && rm -rf node_modules\/ package-lock.json ; npm i ; .\/build.sh'",
+        "library": "read_endpoints",
+        "link_type": "file"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-api-base'",
+        "library": "lib-fox-api-base",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-aws-wrapper'",
+        "library": "lib-fox-aws-wrapper",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-config-base'",
+        "library": "lib-fox-config-base",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-database'",
+        "library": "lib-fox-database",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-exceptions'",
+        "library": "lib-fox-exceptions",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-id-generator'",
+        "library": "lib-fox-id-generator",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-message-writer'",
+        "library": "lib-fox-message-writer",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-read-api'",
+        "library": "lib-fox-read-api",
+        "link_type": "read_endpoints"
+    },
+    {
+        "cmd": "docker exec -it fnc-lambdanode \/bin\/sh -c 'cd .\/read_endpoints && npm link ..\/local-libraries\/\\@foxcorp\/lib-fox-write-api'",
+        "library": "lib-fox-write-api",
+        "link_type": "read_endpoints"
+    }
+]
