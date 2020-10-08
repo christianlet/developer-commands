@@ -20,7 +20,7 @@ class LinkLibraries extends Command
      */
     protected $signature = 'link-libraries
                             {--network= : The API network (ex: foxnews)}
-                            {--p|path : Link by file path instead of npm link}
+                            {--npm : Link with npm link}
                             {--r|revert : Revert local link';
 
     /**
@@ -31,8 +31,6 @@ class LinkLibraries extends Command
     protected $description = 'Links the local libraries inside the API repo.';
 
     private $networkName;
-    private $linkByFilePath;
-    private $localLibraries;
 
     /**
      * Create a new command instance.
@@ -52,14 +50,16 @@ class LinkLibraries extends Command
     public function handle()
     {
         $this->networkName = $this->option('network');
-        $linkType          = $this->option('path') || $this->networkName === 'foxnews' ? 'file' : 'npm';
 
         if( empty($this->networkName) || !array_search($this->networkName, NetworkHelper::NETWORKS) ){
             $this->networkName = $this->choice(
                 'What network do you want to link?',
                 CommandHelper::mapChoices( array_values(NetworkHelper::NETWORKS) )
             );
+
         }
+
+        $linkType = $this->option('npm') ? 'npm' : 'file';
 
         $start = microtime(true);
 

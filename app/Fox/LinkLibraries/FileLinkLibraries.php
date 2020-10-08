@@ -23,7 +23,7 @@ class FileLinkLibraries extends BaseLinkLibraries {
                 $this->modifyLocalLibraryDependencies($libraryPath);
 
                 return new Command(
-                    $this->getDockerCommand( "cd ./local-libraries/@foxcorp/{$library} && " . self::REMOVE_MODULES_AND_LOCK . " && npm run build" ),
+                    $this->getDockerCommand( "cd ./local-libraries/@foxcorp/{$library} && " . self::REMOVE_MODULES_AND_LOCK ),
                     $library,
                     'local'
                 );

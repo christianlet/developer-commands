@@ -69,7 +69,7 @@ class NpmLinkLibraries extends BaseLinkLibraries {
     private function endpointLinkCommands( string $endpoint ): array {
         $buildEndpoint = [
             new Command(
-                $this->getDockerCommand( "cd ./{$endpoint}_endpoints && " . self::REMOVE_MODULES_AND_LOCK . " ; npm i ; ./build.sh" ),
+                $this->getDockerCommand( "cd ./{$endpoint}_endpoints && " . self::REMOVE_MODULES_AND_LOCK . " ; ./build.sh ; npm i" ),
                 "{$endpoint}_endpoints",
                 "file"
             )
