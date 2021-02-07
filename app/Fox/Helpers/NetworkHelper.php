@@ -4,6 +4,7 @@ namespace App\Fox\Helpers;
 
 class NetworkHelper {
     const NETWORKS = [
+        'fbn' => 'foxbusiness',
         'fnc' => 'foxnews',
         'fs'  => 'foxsports',
         'fts' => 'fts-foxnews'
